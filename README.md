@@ -4,7 +4,7 @@
 Date Created 9 Mar 2026
 
 ### Project Title
-Bike Share statstics
+Bikeshare statistics
 
 ### Description
 This program analyzes bikeshare data from Chicago, New York City, and Washington. The user can choose a city, month, and day to filter the data. The program then shows statistics like common travel times, popular stations, trip duration, and user information. It can also display the raw data if the user wants to see it.

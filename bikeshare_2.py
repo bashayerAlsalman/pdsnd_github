@@ -53,7 +53,11 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     # Get the file based on the selected city
-    df = pd.read_csv(CITY_DATA[city])
+    try:
+        df = pd.read_csv(CITY_DATA[city])
+    except Exception as e:
+        raise FileNotFoundError(f"Could not load data for {city}: {e}")
+
 
     # filter based on month
     if month != "all":

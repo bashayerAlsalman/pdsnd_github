@@ -6,7 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-month_number = {"january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6}
+MONTH_NUMBER = {"january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6}
 
 def get_filters():
     """
@@ -64,7 +64,7 @@ def load_data(city, month, day):
         df['End Time'] = pd.to_datetime(df['End Time'])
         df['end_month'] = df['End Time'].dt.month
                 
-        df = df[(df['start_month'] <= month_number[month]) & (df['end_month'] >= month_number[month])]
+        df = df[(df['start_month'] <= MONTH_NUMBER[month]) & (df['end_month'] >= MONTH_NUMBER[month])]
 
     # convert start time into datetime and create day of week
     df['Start Time'] = pd.to_datetime(df['Start Time'])
